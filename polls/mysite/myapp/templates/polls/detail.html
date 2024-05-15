@@ -13,7 +13,7 @@
             <li>{{ choice.choice_text }}</li>
         {% endfor %}
         </ul>
-        <form action="{% url 'myapp:vote' question.id %}" method="post">
+        <form action="{% url 'polls:vote' question.id %}" method="post">
             {% csrf_token %}
             <fieldset>
                 <legend><h1>{{ question.question_text }}</h1></legend>
